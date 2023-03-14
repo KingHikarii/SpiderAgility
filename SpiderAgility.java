@@ -9,17 +9,12 @@ public class SpiderAgility
 
     int i = 0;
 
-    while (i == 0) //Put this in another class called: (Randomizer Number)
+    while (i != 5) //Put this in another class called: (Randomizer Number)
     {
         limit_num = rand_num.nextInt(four);
         System.out.println(limit_num);
         Thread.sleep(2000);
         i++;
-
-        if (i == 5)
-        {
-            System.out.println("End.");
-        }
     }
     }
 }

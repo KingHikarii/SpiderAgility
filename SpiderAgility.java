@@ -9,11 +9,35 @@ public class SpiderAgility
 
     int i = 0;
 
-    while (i != 5) //Put this in another class called: (Randomizer Number)
+    while (i != 30) //Put this in another class called: (Randomizer Number)
     {
         limit_num = rand_num.nextInt(four);
-        System.out.println(limit_num);
-        Thread.sleep(2000);
+        //System.out.println(limit_num);
+
+        if(limit_num == 0)
+        {
+            System.out.println();
+            System.out.println("Jump Up!");
+        }
+
+        else if(limit_num == 1)
+        {
+            System.out.println();
+            System.out.println("Duck!");
+        }
+
+        else if(limit_num == 2)
+        {
+            System.out.println();
+            System.out.println("Move right!");
+        }
+        else if(limit_num ==  3)
+        {
+            System.out.println();
+            System.out.println("Move left");
+        }
+
+        Thread.sleep(1000); //Important, this is so that the athlete wil be able to change the speed once the GUI are set up.
         i++;
     }
     }

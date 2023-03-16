@@ -2,32 +2,25 @@ import java.awt.*;
 import java.util.Random;
 import java.lang.Thread;
 import javax.swing.*;
+import java.lang.*;
+import javax.swing.border.EmptyBorder;
+
+
+
 
 public class SpiderAgility {
-    public static void Application_Launcher() {
-        JPanel content_pane;
+    public void Application_Launcher() {
 
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    SpiderAgility frame = new SpiderAgility();
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    public void SpiderAgility() {
-            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            setBounds(100, 100, 450, 300);
-            content_pane = new JPanel();
-            content_pane.setBorder(new EmptyBorder(5, 5, 5, 5));
-            content_pane.setLayout(new BorderLayout(0, 0));
-            setContentPane(content_pane);
+            JFrame frame = new JFrame("My First GUI");
+            //"C:/Users/Yeshu/OneDrive/Desktop/Pictures and Videos/App_Spider"
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(300,300);
+            JButton button = new JButton("Press");
+            frame.getContentPane().add(button); // Adds Button to content pane of frame
+            frame.setVisible(true);
+            frame.setIconImage(new ImageIcon(getClass().getResource("/images/App_Spider.png")).getImage());
+
         }
-    }
-
 
 
 
@@ -35,8 +28,8 @@ public class SpiderAgility {
 
     public static void main(String args[]) throws InterruptedException
     {
-       SpiderAgility al = new SpiderAgility();
-       al.Application_Launcher();
+        SpiderAgility al = new SpiderAgility();
+        al.Application_Launcher();
 
         Random rand_num = new Random();  //Put this in a class that will establish
         int four = 4;
@@ -73,8 +66,8 @@ public class SpiderAgility {
 
             Thread.sleep(1000); //Important, this is so that the athlete wil be able to change the speed once the GUI are set up.
             i++;
-            }
-
         }
+
+    }
 
 }
